@@ -1,43 +1,41 @@
 class Restaurant {
   const Restaurant({
     required this.name,
-    required this.cuisine,
-    required this.ratings,
+    required this.comida,
+    required this.avaliacoes,
   });
 
   final String name;
-  final String cuisine;
-  final List<double> ratings;
+  final String comida;
+  final List<double> avaliacoes;
 
-  // Getter para saber quantas avaliações tem
   int get totalAvaliacoes {
-    return ratings.length;
+    return avaliacoes.length;
   }
 
-  // Getter para calcular a média das avaliações
   double get mediaAvaliacoes {
-    if (ratings.isEmpty) {
+    if (avaliacoes.isEmpty) {
       return 0;
     }
 
     double soma = 0;
-    for (int i = 0; i < ratings.length; i++) {
-      soma += ratings[i];
+    for (int i = 0; i < avaliacoes.length; i++) {
+      soma += avaliacoes[i];
     }
 
-    return soma / ratings.length;
+    return soma / avaliacoes.length;
   }
 }
 
 void main() {
   Restaurant restaurante = Restaurant(
-    name: 'Sabor Caseiro',
-    cuisine: 'Comida Brasileira',
-    ratings: [4.5, 5.0, 4.0, 3.5],
+    name: 'sabor Caseiro',
+    comida: 'comida Brasileira',
+    avaliacoes: [4.5, 5.0, 4.0, 3.5],
   );
 
   print('Restaurante: ${restaurante.name}');
-  print('Tipo: ${restaurante.cuisine}');
+  print('Tipo: ${restaurante.comida}');
   print('Total de avaliações: ${restaurante.totalAvaliacoes}');
   print('Média das avaliações: ${restaurante.mediaAvaliacoes}');
 }

@@ -3,8 +3,8 @@ void main() {
 
   List<int> resultado = pegarPrimeiroEUltimo(numeros);
 
-  print('Lista original: $numeros');
-  print('Nova lista com o primeiro e o último: $resultado');
+  print('lista original: $numeros');
+  print('nova lista com o primeiro e o último: $resultado');
 }
 
 List<int> pegarPrimeiroEUltimo(List<int> lista) {
